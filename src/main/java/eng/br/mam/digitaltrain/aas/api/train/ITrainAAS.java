@@ -11,4 +11,4 @@ public interface ITrainAAS extends IAssetAdministrationShell {
 	public ITrainControllerSM getTrainControllerSM();	
 	public IServiceSM getServiceSM();
 	
-}
+d }
