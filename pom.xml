@@ -1,0 +1,36 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>eng.br.mam</groupId>
+  <artifactId>traintwin</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+	<dependencies>
+		<!-- Add BaSys components from local repository. This contains the dependency to the basyx.sdk-->
+		<dependency>
+			<groupId>org.eclipse.basyx</groupId>
+			<artifactId>basyx.components.lib</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+		
+		<!-- Add Registry Server component dependency -->
+		<dependency>
+			<groupId>org.eclipse.basyx</groupId>
+			<artifactId>basyx.components.registry</artifactId>
+			<version>1.0.2</version>
+		</dependency>
+				
+		<!-- Add AAS Server component dependency -->
+		<dependency>
+			<groupId>org.eclipse.basyx</groupId>
+			<artifactId>basyx.components.AASServer</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+		
+		
+		<!-- JUnit 4 for running JUnit tests -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.12</version>
+		</dependency>
+	</dependencies>
+</project>
