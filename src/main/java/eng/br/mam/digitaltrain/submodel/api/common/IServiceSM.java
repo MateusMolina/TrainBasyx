@@ -1,4 +1,4 @@
-package eng.br.mam.digitaltrain.submodel.api.controller;
+package eng.br.mam.digitaltrain.submodel.api.common;
 
 import org.eclipse.basyx.submodel.metamodel.api.ISubmodel;
 import org.eclipse.basyx.submodel.metamodel.map.submodelelement.SubmodelElementCollection;

@@ -1,0 +1,16 @@
+# TrainBasyx
+
+An implementation of a train asset administration shell using BASYX as framework.
+
+## Use-cases
+
+## Todo
+[X] Model API
+[ ] Model Standard Implementation
+[ ] Implement AAS Factories
+[ ] Mockup 
+[ ] Model Use-cases
+[ ] Implement Tests
+[ ] Implement Sensors and PUB/SUB
+[ ] Connect with simulated devices
+ 

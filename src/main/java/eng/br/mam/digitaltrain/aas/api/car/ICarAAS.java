@@ -2,6 +2,8 @@ package eng.br.mam.digitaltrain.aas.api.car;
 
 import org.eclipse.basyx.aas.metamodel.api.IAssetAdministrationShell;
 
+import eng.br.mam.digitaltrain.aas.api.common.Maintainable;
+import eng.br.mam.digitaltrain.aas.api.common.ServiceProvider;
 import eng.br.mam.digitaltrain.submodel.api.car.IStateSM;
 /**
  * 
@@ -12,11 +14,6 @@ import eng.br.mam.digitaltrain.submodel.api.car.IStateSM;
  *
  */
 
-public interface ICarAAS extends IAssetAdministrationShell {
-	
-	public IStatusSM getStatusSM();
+public interface ICarAAS extends IAssetAdministrationShell, ServiceProvider, Maintainable {
 	public IStateSM getStateSM();
-	public IDetailsSM getDetailsSM();
-	public IServiceSM getServiceSM(); 
-
 }
