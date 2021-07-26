@@ -1,7 +1,5 @@
 package eng.br.mam.digitaltrain.aas.api.device;
 
-import eng.br.mam.digitaltrain.aas.api.common.ServiceProvider;
-
-public interface ICompressorAAS extends ServiceProvider{
+public interface ICompressorAAS extends IDeviceAAS{
 
 }
