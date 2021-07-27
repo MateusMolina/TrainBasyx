@@ -6,7 +6,7 @@ An implementation of a train asset administration shell using BASYX as framework
 
 ## Todo
 [X] Model API
-[ ] Model Standard Implementation
+[X] Model Standard Implementation
 [ ] Implement AAS Factories
 [ ] Mockup 
 [ ] Model Use-cases

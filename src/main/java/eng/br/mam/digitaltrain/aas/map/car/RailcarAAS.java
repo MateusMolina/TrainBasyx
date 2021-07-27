@@ -1,22 +1,27 @@
 package eng.br.mam.digitaltrain.aas.map.car;
 
+import org.eclipse.basyx.submodel.metamodel.api.identifier.IIdentifier;
+
 import eng.br.mam.digitaltrain.aas.api.car.IRailcarAAS;
 import eng.br.mam.digitaltrain.submodel.api.car.IRailcarSM;
-import eng.br.mam.digitaltrain.submodel.api.car.IStateSM;
-import eng.br.mam.digitaltrain.submodel.api.common.IMaintenanceSM;
-import eng.br.mam.digitaltrain.submodel.api.common.IServiceSM;
-import eng.br.mam.digitaltrain.submodel.api.common.IStatusSM;
+import eng.br.mam.digitaltrain.submodel.map.car.RailcarSM;
+import eng.br.mam.digitaltrain.submodel.map.car.StateSM;
+import eng.br.mam.digitaltrain.submodel.map.common.MaintenanceSM;
+import eng.br.mam.digitaltrain.submodel.map.common.ServiceSM;
+import eng.br.mam.digitaltrain.submodel.map.common.StatusSM;
 
 public class RailcarAAS extends CarAAS implements IRailcarAAS {
 
-	private IRailcarSM railcarSM;
-	public RailcarAAS(IServiceSM serviceSM, IStatusSM statusSM, IMaintenanceSM maintenanceSM, IStateSM stateSM, IRailcarSM railcarSM) {
+	private IIdentifier railcarId;
+	
+	public RailcarAAS(ServiceSM serviceSM, StatusSM statusSM, MaintenanceSM maintenanceSM, StateSM stateSM, RailcarSM railcarSM) {
 		super(serviceSM, statusSM, maintenanceSM, stateSM);
-		this.railcarSM = railcarSM;
+		addSubmodel(railcarSM);
+		this.railcarId = railcarSM.getIdentification();
 	}
 
 	public IRailcarSM getRailcarSM() {
-		return railcarSM;
+		return (RailcarSM) getSubmodel(railcarId);
 	}
 
 }

@@ -1,11 +1,10 @@
 package eng.br.mam.digitaltrain.submodel.api.common;
 
 import org.eclipse.basyx.submodel.metamodel.api.ISubmodel;
-import org.eclipse.basyx.submodel.metamodel.map.submodelelement.SubmodelElementCollection;
+import org.eclipse.basyx.submodel.metamodel.api.submodelelement.ISubmodelElementCollection;
 
 public interface IServiceSM extends ISubmodel {
-	public SubmodelElementCollection getServices();
-	public void setServices(SubmodelElementCollection services);
+	public ISubmodelElementCollection getServices();
 	public Object callService(String name, Object... params);
 
 }

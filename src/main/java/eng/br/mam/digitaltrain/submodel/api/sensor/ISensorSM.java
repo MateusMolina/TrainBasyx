@@ -8,7 +8,7 @@ public interface ISensorSM extends ISubmodel {
 	public IProperty getValue();
 	// PUBSUP Proxy attribute
 	
-	public void fetchValue();
+	public float fetchValue();
 	public void setValue(float newValue);
 	
 	// TODO PUB/SUB Integration
