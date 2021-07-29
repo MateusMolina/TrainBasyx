@@ -18,6 +18,7 @@ public class TrackAAS extends AssetAdministrationShell implements ITrackAAS {
 		super();
 		this.addSubmodel(maintenanceSM);
 		this.addSubmodel(trackTopologySM);
+		setIdShort("Track");
 		this.maintenanceId = maintenanceSM.getIdentification();
 		this.trackTopologyId = trackTopologySM.getIdentification();
 	}

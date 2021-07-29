@@ -8,6 +8,7 @@ public class PneumaticBrakeAAS extends BaseDeviceAAS implements IPneumaticBrakeA
 
 	public PneumaticBrakeAAS(ServiceSM serviceSM, StatusSM statusSM) {
 		super(serviceSM, statusSM);
+		setIdShort("PneumaticBrakeAAS");
 	}
 
 }

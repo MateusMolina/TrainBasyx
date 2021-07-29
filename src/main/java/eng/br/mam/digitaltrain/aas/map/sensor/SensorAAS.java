@@ -14,6 +14,7 @@ public class SensorAAS extends AssetAdministrationShell implements ISensorAAS {
 	public SensorAAS(SensorSM sensorSM) {
 		super();
 		this.addSubmodel(sensorSM);
+		setIdShort("Sensor");
 		this.sensorId = sensorSM.getIdentification();
 	}
 

@@ -8,6 +8,7 @@ public class CompressorAAS extends BaseDeviceAAS implements ICompressorAAS {
 
 	public CompressorAAS(ServiceSM serviceSM, StatusSM statusSM) {
 		super(serviceSM, statusSM);
+		setIdShort("CompressorAAS");
 	}
 
 }

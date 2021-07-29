@@ -17,6 +17,7 @@ public class RailcarAAS extends CarAAS implements IRailcarAAS {
 	public RailcarAAS(ServiceSM serviceSM, StatusSM statusSM, MaintenanceSM maintenanceSM, StateSM stateSM, RailcarSM railcarSM) {
 		super(serviceSM, statusSM, maintenanceSM, stateSM);
 		addSubmodel(railcarSM);
+		setIdShort("RailcarAAS");
 		this.railcarId = railcarSM.getIdentification();
 	}
 

@@ -22,7 +22,7 @@ public class TrainAAS extends AssetAdministrationShell implements ITrainAAS {
 		this.addSubmodel(serviceSM);
 		this.addSubmodel(statusSM);
 		this.addSubmodel(trainTopologySM);
-		
+		setIdShort("Train");
 		this.serviceId = serviceSM.getIdentification();
 		this.statusId = statusSM.getIdentification();
 		this.trainTopologyId = trainTopologySM.getIdentification();

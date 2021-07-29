@@ -17,6 +17,7 @@ public class LocomotiveAAS extends CarAAS implements ILocomotiveAAS {
 	public LocomotiveAAS(ServiceSM serviceSM, StatusSM statusSM, MaintenanceSM maintenanceSM, StateSM stateSM, LocomotiveSM locomotiveSM) {
 		super(serviceSM, statusSM, maintenanceSM, stateSM);
 		addSubmodel(locomotiveSM);
+		setIdShort("LocomotiveAAS");
 		this.locomotiveId = locomotiveSM.getIdentification();
 	}
 
