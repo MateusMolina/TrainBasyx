@@ -1,12 +1,10 @@
-package eng.br.mam.digitaltrain.submodel.map.common;
+package eng.br.mam.digitaltrain.submodel.common;
 
 import org.eclipse.basyx.submodel.metamodel.api.submodelelement.ISubmodelElementCollection;
 import org.eclipse.basyx.submodel.metamodel.api.submodelelement.dataelement.IProperty;
 import org.eclipse.basyx.submodel.metamodel.map.Submodel;
 import org.eclipse.basyx.submodel.metamodel.map.submodelelement.SubmodelElementCollection;
 import org.eclipse.basyx.submodel.metamodel.map.submodelelement.dataelement.property.Property;
-
-import eng.br.mam.digitaltrain.submodel.api.common.IMaintenanceSM;
 
 public class MaintenanceSM extends Submodel implements IMaintenanceSM {
 	
@@ -21,10 +19,12 @@ public class MaintenanceSM extends Submodel implements IMaintenanceSM {
 		this.maintenanceStatusId = maintenanceStatus.getIdShort();
 	}
 
+	@Override
 	public ISubmodelElementCollection getMaintenanceMetadata() {
 		return (SubmodelElementCollection) this.getSubmodelElement(maintenanceMetadataId);
 	}
 
+	@Override
 	public IProperty getMaintenanceStatus() {
 		return (Property) this.getSubmodelElement(maintenanceStatusId);
 	}

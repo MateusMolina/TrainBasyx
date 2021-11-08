@@ -1,6 +1,6 @@
-package eng.br.mam.digitaltrain.aas.api.qualifiers;
+package eng.br.mam.digitaltrain.aas.qualifiers;
 
-import eng.br.mam.digitaltrain.submodel.api.common.IMaintenanceSM;
+import eng.br.mam.digitaltrain.submodel.common.IMaintenanceSM;
 
 public interface Maintainable {
 

@@ -1,7 +1,6 @@
-package eng.br.mam.digitaltrain.aas.factory.device;
+package eng.br.mam.digitaltrain.aas.device;
 
-import eng.br.mam.digitaltrain.aas.map.device.CompressorAAS;
-import eng.br.mam.digitaltrain.submodel.map.common.ServiceSM;
+import eng.br.mam.digitaltrain.submodel.common.ServiceSM;
 
 public class CompressorAASFactory extends DeviceAASFactory {
 	

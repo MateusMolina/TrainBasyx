@@ -1,10 +1,8 @@
-package eng.br.mam.digitaltrain.submodel.map.common;
+package eng.br.mam.digitaltrain.submodel.common;
 
 import org.eclipse.basyx.submodel.metamodel.api.submodelelement.dataelement.IProperty;
 import org.eclipse.basyx.submodel.metamodel.map.Submodel;
 import org.eclipse.basyx.submodel.metamodel.map.submodelelement.dataelement.property.Property;
-
-import eng.br.mam.digitaltrain.submodel.api.common.IStatusSM;
 
 public class StatusSM extends Submodel implements IStatusSM {
 
@@ -16,6 +14,7 @@ public class StatusSM extends Submodel implements IStatusSM {
 		this.statusId = status.getIdShort();
 	}
 	
+	@Override
 	public IProperty getStatus() {
 		return (Property) this.getSubmodelElement(statusId);
 	}

@@ -1,10 +1,9 @@
-package eng.br.mam.digitaltrain.aas.factory.car;
+package eng.br.mam.digitaltrain.aas.car;
 
-import eng.br.mam.digitaltrain.aas.factory.device.CompressorAASFactory;
-import eng.br.mam.digitaltrain.aas.factory.device.EngineAASFactory;
-import eng.br.mam.digitaltrain.aas.map.car.LocomotiveAAS;
-import eng.br.mam.digitaltrain.submodel.map.car.LocomotiveSM;
-import eng.br.mam.digitaltrain.submodel.map.common.ServiceSM;
+import eng.br.mam.digitaltrain.aas.device.CompressorAASFactory;
+import eng.br.mam.digitaltrain.aas.device.EngineAASFactory;
+import eng.br.mam.digitaltrain.submodel.car.LocomotiveSM;
+import eng.br.mam.digitaltrain.submodel.common.ServiceSM;
 
 public class LocomotiveAASFactory extends CarAASFactory {
 	private LocomotiveSM locomotiveSM;

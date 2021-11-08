@@ -1,11 +1,10 @@
-package eng.br.mam.digitaltrain.aas.map.sensor;
+package eng.br.mam.digitaltrain.aas.sensor;
 
 import org.eclipse.basyx.aas.metamodel.map.AssetAdministrationShell;
 import org.eclipse.basyx.submodel.metamodel.api.identifier.IIdentifier;
 
-import eng.br.mam.digitaltrain.aas.api.sensor.ISensorAAS;
-import eng.br.mam.digitaltrain.submodel.api.sensor.ISensorSM;
-import eng.br.mam.digitaltrain.submodel.map.sensor.SensorSM;
+import eng.br.mam.digitaltrain.submodel.sensor.ISensorSM;
+import eng.br.mam.digitaltrain.submodel.sensor.SensorSM;
 
 public class SensorAAS extends AssetAdministrationShell implements ISensorAAS {
 	
@@ -18,6 +17,7 @@ public class SensorAAS extends AssetAdministrationShell implements ISensorAAS {
 		this.sensorId = sensorSM.getIdentification();
 	}
 
+	@Override
 	public ISensorSM getSensorSM() {
 		return (SensorSM) this.getSubmodel(sensorId);
 	}

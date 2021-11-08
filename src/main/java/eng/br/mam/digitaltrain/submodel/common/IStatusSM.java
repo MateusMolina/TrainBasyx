@@ -1,4 +1,4 @@
-package eng.br.mam.digitaltrain.submodel.api.common;
+package eng.br.mam.digitaltrain.submodel.common;
 
 import org.eclipse.basyx.submodel.metamodel.api.submodelelement.dataelement.IProperty;
 

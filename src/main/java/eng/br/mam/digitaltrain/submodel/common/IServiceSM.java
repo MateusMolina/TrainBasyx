@@ -1,6 +1,5 @@
-package eng.br.mam.digitaltrain.submodel.api.common;
+package eng.br.mam.digitaltrain.submodel.common;
 
-import org.eclipse.basyx.aas.metamodel.map.AssetAdministrationShell;
 import org.eclipse.basyx.submodel.metamodel.api.ISubmodel;
 import org.eclipse.basyx.submodel.metamodel.api.submodelelement.ISubmodelElementCollection;
 

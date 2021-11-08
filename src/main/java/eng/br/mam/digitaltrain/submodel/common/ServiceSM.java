@@ -1,10 +1,8 @@
-package eng.br.mam.digitaltrain.submodel.map.common;
+package eng.br.mam.digitaltrain.submodel.common;
 
 import org.eclipse.basyx.submodel.metamodel.api.submodelelement.ISubmodelElementCollection;
 import org.eclipse.basyx.submodel.metamodel.map.Submodel;
 import org.eclipse.basyx.submodel.metamodel.map.submodelelement.SubmodelElementCollection;
-
-import eng.br.mam.digitaltrain.submodel.api.common.IServiceSM;
 
 public abstract class ServiceSM extends Submodel implements IServiceSM {
 	
@@ -17,10 +15,12 @@ public abstract class ServiceSM extends Submodel implements IServiceSM {
 		this.servicesId = services.getIdShort();
 	}
 	
+	@Override
 	public ISubmodelElementCollection getServices() {
 		return (SubmodelElementCollection) this.getSubmodelElement(servicesId);
 	}
 
+	@Override
 	public Object callService(String name, Object... params) {
 		// TODO To implement caller
 		return null;

@@ -1,8 +1,7 @@
-package eng.br.mam.digitaltrain.aas.map.device;
+package eng.br.mam.digitaltrain.aas.device;
 
-import eng.br.mam.digitaltrain.aas.api.device.ICompressorAAS;
-import eng.br.mam.digitaltrain.submodel.map.common.ServiceSM;
-import eng.br.mam.digitaltrain.submodel.map.common.StatusSM;
+import eng.br.mam.digitaltrain.submodel.common.ServiceSM;
+import eng.br.mam.digitaltrain.submodel.common.StatusSM;
 
 public class CompressorAAS extends BaseDeviceAAS implements ICompressorAAS {
 

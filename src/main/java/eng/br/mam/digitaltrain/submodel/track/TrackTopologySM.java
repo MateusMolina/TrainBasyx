@@ -1,10 +1,8 @@
-package eng.br.mam.digitaltrain.submodel.map.track;
+package eng.br.mam.digitaltrain.submodel.track;
 
 import org.eclipse.basyx.submodel.metamodel.api.submodelelement.ISubmodelElementCollection;
 import org.eclipse.basyx.submodel.metamodel.map.Submodel;
 import org.eclipse.basyx.submodel.metamodel.map.submodelelement.SubmodelElementCollection;
-
-import eng.br.mam.digitaltrain.submodel.api.track.ITrackTopologySM;
 
 public class TrackTopologySM extends Submodel implements ITrackTopologySM {
 
@@ -16,6 +14,7 @@ public class TrackTopologySM extends Submodel implements ITrackTopologySM {
 		this.topologyId = topology.getIdShort();
 	}
 	
+	@Override
 	public ISubmodelElementCollection getTopology() {
 		return (SubmodelElementCollection) this.getSubmodelElement(topologyId);
 	}

@@ -1,10 +1,10 @@
-package eng.br.mam.digitaltrain.aas.factory.car;
+package eng.br.mam.digitaltrain.aas.car;
 
-import eng.br.mam.digitaltrain.aas.factory.common.CommonFactory;
-import eng.br.mam.digitaltrain.submodel.map.car.StateSM;
-import eng.br.mam.digitaltrain.submodel.map.common.MaintenanceSM;
-import eng.br.mam.digitaltrain.submodel.map.common.ServiceSM;
-import eng.br.mam.digitaltrain.submodel.map.common.StatusSM;
+import eng.br.mam.digitaltrain.aas.common.CommonFactory;
+import eng.br.mam.digitaltrain.submodel.car.StateSM;
+import eng.br.mam.digitaltrain.submodel.common.MaintenanceSM;
+import eng.br.mam.digitaltrain.submodel.common.ServiceSM;
+import eng.br.mam.digitaltrain.submodel.common.StatusSM;
 
 public abstract class CarAASFactory {
 	

@@ -1,6 +1,6 @@
-package eng.br.mam.digitaltrain.submodel.api.car;
+package eng.br.mam.digitaltrain.submodel.car;
 
-import eng.br.mam.digitaltrain.aas.api.device.IPneumaticBrakeAAS;
+import eng.br.mam.digitaltrain.aas.device.IPneumaticBrakeAAS;
 
 public interface IRailcarSM {
 

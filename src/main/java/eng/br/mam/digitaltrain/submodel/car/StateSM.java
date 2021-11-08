@@ -1,10 +1,8 @@
-package eng.br.mam.digitaltrain.submodel.map.car;
+package eng.br.mam.digitaltrain.submodel.car;
 
 import org.eclipse.basyx.submodel.metamodel.api.submodelelement.dataelement.IProperty;
 import org.eclipse.basyx.submodel.metamodel.map.Submodel;
 import org.eclipse.basyx.submodel.metamodel.map.submodelelement.dataelement.property.Property;
-
-import eng.br.mam.digitaltrain.submodel.api.car.IStateSM;
 
 public class StateSM extends Submodel implements IStateSM {
 	
@@ -16,6 +14,7 @@ public class StateSM extends Submodel implements IStateSM {
 		this.massId = massProp.getIdShort();
 	}
 	
+	@Override
 	public IProperty getMass() {
 		return (Property) this.getSubmodelElement(massId);
 	}

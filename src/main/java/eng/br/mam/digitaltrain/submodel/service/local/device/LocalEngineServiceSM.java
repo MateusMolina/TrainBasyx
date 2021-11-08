@@ -2,7 +2,7 @@ package eng.br.mam.digitaltrain.submodel.service.local.device;
 
 import org.eclipse.basyx.submodel.metamodel.api.submodelelement.ISubmodelElementCollection;
 
-import eng.br.mam.digitaltrain.submodel.map.common.ServiceSM;
+import eng.br.mam.digitaltrain.submodel.common.ServiceSM;
 import eng.br.mam.digitaltrain.submodel.service.helper.SubmodelElementHelper;
 
 public class LocalEngineServiceSM extends ServiceSM {

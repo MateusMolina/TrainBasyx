@@ -1,7 +1,6 @@
-package eng.br.mam.digitaltrain.aas.factory.sensor;
+package eng.br.mam.digitaltrain.aas.sensor;
 
-import eng.br.mam.digitaltrain.aas.map.sensor.SensorAAS;
-import eng.br.mam.digitaltrain.submodel.map.sensor.SensorSM;
+import eng.br.mam.digitaltrain.submodel.sensor.SensorSM;
 
 public class SensorAASFactory {
 	public static SensorAAS build() {

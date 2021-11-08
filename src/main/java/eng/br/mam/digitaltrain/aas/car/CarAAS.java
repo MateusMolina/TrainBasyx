@@ -1,17 +1,16 @@
-package eng.br.mam.digitaltrain.aas.map.car;
+package eng.br.mam.digitaltrain.aas.car;
 
 import org.eclipse.basyx.aas.metamodel.map.AssetAdministrationShell;
 import org.eclipse.basyx.submodel.metamodel.api.identifier.IIdentifier;
 
-import eng.br.mam.digitaltrain.aas.api.car.ICarAAS;
-import eng.br.mam.digitaltrain.submodel.api.car.IStateSM;
-import eng.br.mam.digitaltrain.submodel.api.common.IMaintenanceSM;
-import eng.br.mam.digitaltrain.submodel.api.common.IServiceSM;
-import eng.br.mam.digitaltrain.submodel.api.common.IStatusSM;
-import eng.br.mam.digitaltrain.submodel.map.car.StateSM;
-import eng.br.mam.digitaltrain.submodel.map.common.MaintenanceSM;
-import eng.br.mam.digitaltrain.submodel.map.common.ServiceSM;
-import eng.br.mam.digitaltrain.submodel.map.common.StatusSM;
+import eng.br.mam.digitaltrain.submodel.car.IStateSM;
+import eng.br.mam.digitaltrain.submodel.car.StateSM;
+import eng.br.mam.digitaltrain.submodel.common.IMaintenanceSM;
+import eng.br.mam.digitaltrain.submodel.common.IServiceSM;
+import eng.br.mam.digitaltrain.submodel.common.IStatusSM;
+import eng.br.mam.digitaltrain.submodel.common.MaintenanceSM;
+import eng.br.mam.digitaltrain.submodel.common.ServiceSM;
+import eng.br.mam.digitaltrain.submodel.common.StatusSM;
 
 abstract public class CarAAS extends AssetAdministrationShell implements ICarAAS {
 
@@ -45,6 +44,7 @@ abstract public class CarAAS extends AssetAdministrationShell implements ICarAAS
 		return (MaintenanceSM) this.getSubmodel(maintenanceId);
 	}
 
+	@Override
 	public IStateSM getStateSM() {
 		return (StateSM) this.getSubmodel(stateId);
 	}

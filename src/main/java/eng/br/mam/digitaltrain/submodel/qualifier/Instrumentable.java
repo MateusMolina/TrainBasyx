@@ -1,4 +1,4 @@
-package eng.br.mam.digitaltrain.submodel.api.qualifier;
+package eng.br.mam.digitaltrain.submodel.qualifier;
 
 
 import org.eclipse.basyx.submodel.metamodel.api.submodelelement.ISubmodelElementCollection;

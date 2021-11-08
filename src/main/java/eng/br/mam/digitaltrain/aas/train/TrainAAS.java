@@ -1,15 +1,14 @@
-package eng.br.mam.digitaltrain.aas.map.train;
+package eng.br.mam.digitaltrain.aas.train;
 
 import org.eclipse.basyx.aas.metamodel.map.AssetAdministrationShell;
 import org.eclipse.basyx.submodel.metamodel.api.identifier.IIdentifier;
 
-import eng.br.mam.digitaltrain.aas.api.train.ITrainAAS;
-import eng.br.mam.digitaltrain.submodel.api.common.IServiceSM;
-import eng.br.mam.digitaltrain.submodel.api.common.IStatusSM;
-import eng.br.mam.digitaltrain.submodel.api.train.ITrainTopologySM;
-import eng.br.mam.digitaltrain.submodel.map.common.ServiceSM;
-import eng.br.mam.digitaltrain.submodel.map.common.StatusSM;
-import eng.br.mam.digitaltrain.submodel.map.train.TrainTopologySM;
+import eng.br.mam.digitaltrain.submodel.common.IServiceSM;
+import eng.br.mam.digitaltrain.submodel.common.IStatusSM;
+import eng.br.mam.digitaltrain.submodel.common.ServiceSM;
+import eng.br.mam.digitaltrain.submodel.common.StatusSM;
+import eng.br.mam.digitaltrain.submodel.train.ITrainTopologySM;
+import eng.br.mam.digitaltrain.submodel.train.TrainTopologySM;
 
 public class TrainAAS extends AssetAdministrationShell implements ITrainAAS {
 	
@@ -28,14 +27,17 @@ public class TrainAAS extends AssetAdministrationShell implements ITrainAAS {
 		this.trainTopologyId = trainTopologySM.getIdentification();
 	}
 
+	@Override
 	public IServiceSM getServiceSM() {
 		return (ServiceSM) this.getSubmodel(serviceId);
 	}
 
+	@Override
 	public IStatusSM getStatusSM() {
 		return (StatusSM) this.getSubmodel(statusId);
 	}
 
+	@Override
 	public ITrainTopologySM getTrainTopologySM() {
 		return (TrainTopologySM) this.getSubmodel(trainTopologyId);
 	}

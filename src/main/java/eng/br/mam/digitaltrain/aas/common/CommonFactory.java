@@ -1,10 +1,10 @@
-package eng.br.mam.digitaltrain.aas.factory.common;
+package eng.br.mam.digitaltrain.aas.common;
 
 import org.eclipse.basyx.submodel.metamodel.map.submodelelement.SubmodelElementCollection;
 import org.eclipse.basyx.submodel.metamodel.map.submodelelement.dataelement.property.Property;
 
-import eng.br.mam.digitaltrain.submodel.map.common.MaintenanceSM;
-import eng.br.mam.digitaltrain.submodel.map.common.StatusSM;
+import eng.br.mam.digitaltrain.submodel.common.MaintenanceSM;
+import eng.br.mam.digitaltrain.submodel.common.StatusSM;
 
 public class CommonFactory {
 	public static StatusSM getBlankStatusSM(){

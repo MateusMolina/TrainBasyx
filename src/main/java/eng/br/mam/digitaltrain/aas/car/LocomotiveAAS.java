@@ -1,14 +1,13 @@
-package eng.br.mam.digitaltrain.aas.map.car;
+package eng.br.mam.digitaltrain.aas.car;
 
 import org.eclipse.basyx.submodel.metamodel.api.identifier.IIdentifier;
 
-import eng.br.mam.digitaltrain.aas.api.car.ILocomotiveAAS;
-import eng.br.mam.digitaltrain.submodel.api.car.ILocomotiveSM;
-import eng.br.mam.digitaltrain.submodel.map.car.LocomotiveSM;
-import eng.br.mam.digitaltrain.submodel.map.car.StateSM;
-import eng.br.mam.digitaltrain.submodel.map.common.MaintenanceSM;
-import eng.br.mam.digitaltrain.submodel.map.common.ServiceSM;
-import eng.br.mam.digitaltrain.submodel.map.common.StatusSM;
+import eng.br.mam.digitaltrain.submodel.car.ILocomotiveSM;
+import eng.br.mam.digitaltrain.submodel.car.LocomotiveSM;
+import eng.br.mam.digitaltrain.submodel.car.StateSM;
+import eng.br.mam.digitaltrain.submodel.common.MaintenanceSM;
+import eng.br.mam.digitaltrain.submodel.common.ServiceSM;
+import eng.br.mam.digitaltrain.submodel.common.StatusSM;
 
 public class LocomotiveAAS extends CarAAS implements ILocomotiveAAS {
 	
@@ -21,6 +20,7 @@ public class LocomotiveAAS extends CarAAS implements ILocomotiveAAS {
 		this.locomotiveId = locomotiveSM.getIdentification();
 	}
 
+	@Override
 	public ILocomotiveSM getLocomotiveSM() {
 		return (LocomotiveSM) this.getSubmodel(locomotiveId);
 	}

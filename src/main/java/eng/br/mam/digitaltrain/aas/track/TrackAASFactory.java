@@ -1,10 +1,9 @@
-package eng.br.mam.digitaltrain.aas.factory.track;
+package eng.br.mam.digitaltrain.aas.track;
 
 import org.eclipse.basyx.submodel.metamodel.map.submodelelement.SubmodelElementCollection;
 
-import eng.br.mam.digitaltrain.aas.factory.common.CommonFactory;
-import eng.br.mam.digitaltrain.aas.map.track.TrackAAS;
-import eng.br.mam.digitaltrain.submodel.map.track.TrackTopologySM;
+import eng.br.mam.digitaltrain.aas.common.CommonFactory;
+import eng.br.mam.digitaltrain.submodel.track.TrackTopologySM;
 
 public class TrackAASFactory {
 	public static TrackAAS build(SubmodelElementCollection topology) {
