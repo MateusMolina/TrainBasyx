@@ -9,6 +9,8 @@ An implementation of a train asset administration shell using BASYX as framework
 - [X] Model Standard Implementation
 - [X] Implement AAS Factories
 - [X] Structure Local Services
+- [ ] Implement Connected SM/AAS variants
+- [ ] Setup Classes
 - [ ] Mockup Local Services
 - [ ] Model Use-cases
 - [ ] Implement Tests
