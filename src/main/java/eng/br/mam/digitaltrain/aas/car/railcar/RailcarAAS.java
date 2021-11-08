@@ -1,10 +1,11 @@
-package eng.br.mam.digitaltrain.aas.car;
+package eng.br.mam.digitaltrain.aas.car.railcar;
 
 import org.eclipse.basyx.submodel.metamodel.api.identifier.IIdentifier;
 
-import eng.br.mam.digitaltrain.submodel.car.IRailcarSM;
-import eng.br.mam.digitaltrain.submodel.car.RailcarSM;
+import eng.br.mam.digitaltrain.aas.car.CarAAS;
 import eng.br.mam.digitaltrain.submodel.car.StateSM;
+import eng.br.mam.digitaltrain.submodel.car.railcar.IRailcarSM;
+import eng.br.mam.digitaltrain.submodel.car.railcar.RailcarSM;
 import eng.br.mam.digitaltrain.submodel.common.MaintenanceSM;
 import eng.br.mam.digitaltrain.submodel.common.ServiceSM;
 import eng.br.mam.digitaltrain.submodel.common.StatusSM;

@@ -1,5 +1,6 @@
-package eng.br.mam.digitaltrain.aas.device;
+package eng.br.mam.digitaltrain.aas.device.pneumaticbrake;
 
+import eng.br.mam.digitaltrain.aas.device.DeviceAASFactory;
 import eng.br.mam.digitaltrain.submodel.common.ServiceSM;
 
 public class PneumaticBrakeAASFactory extends DeviceAASFactory {

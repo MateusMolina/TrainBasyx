@@ -1,9 +1,9 @@
-package eng.br.mam.digitaltrain.submodel.car;
+package eng.br.mam.digitaltrain.submodel.car.locomotive;
 
 import org.eclipse.basyx.submodel.metamodel.map.Submodel;
 
-import eng.br.mam.digitaltrain.aas.device.ICompressorAAS;
-import eng.br.mam.digitaltrain.aas.device.IEngineAAS;
+import eng.br.mam.digitaltrain.aas.device.compressor.ICompressorAAS;
+import eng.br.mam.digitaltrain.aas.device.engine.IEngineAAS;
 
 public class LocomotiveSM extends Submodel implements ILocomotiveSM {
 	

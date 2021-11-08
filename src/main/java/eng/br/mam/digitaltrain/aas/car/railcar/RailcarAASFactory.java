@@ -1,7 +1,8 @@
-package eng.br.mam.digitaltrain.aas.car;
+package eng.br.mam.digitaltrain.aas.car.railcar;
 
-import eng.br.mam.digitaltrain.aas.device.PneumaticBrakeAASFactory;
-import eng.br.mam.digitaltrain.submodel.car.RailcarSM;
+import eng.br.mam.digitaltrain.aas.car.CarAASFactory;
+import eng.br.mam.digitaltrain.aas.device.pneumaticbrake.PneumaticBrakeAASFactory;
+import eng.br.mam.digitaltrain.submodel.car.railcar.RailcarSM;
 import eng.br.mam.digitaltrain.submodel.common.ServiceSM;
 
 public class RailcarAASFactory extends CarAASFactory {

@@ -1,8 +1,8 @@
-package eng.br.mam.digitaltrain.submodel.car;
+package eng.br.mam.digitaltrain.submodel.car.railcar;
 
 import org.eclipse.basyx.submodel.metamodel.map.Submodel;
 
-import eng.br.mam.digitaltrain.aas.device.IPneumaticBrakeAAS;
+import eng.br.mam.digitaltrain.aas.device.pneumaticbrake.IPneumaticBrakeAAS;
 
 public class RailcarSM extends Submodel implements IRailcarSM {
 

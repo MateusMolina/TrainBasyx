@@ -1,5 +1,6 @@
-package eng.br.mam.digitaltrain.aas.device;
+package eng.br.mam.digitaltrain.aas.device.engine;
 
+import eng.br.mam.digitaltrain.aas.device.DeviceAASFactory;
 import eng.br.mam.digitaltrain.submodel.common.ServiceSM;
 
 public class EngineAASFactory extends DeviceAASFactory {
