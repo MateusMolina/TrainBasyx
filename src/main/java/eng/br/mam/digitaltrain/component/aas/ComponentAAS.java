@@ -1,4 +1,4 @@
-package eng.br.mam.digitaltrain.device.aas;
+package eng.br.mam.digitaltrain.component.aas;
 
 import org.eclipse.basyx.aas.metamodel.map.AssetAdministrationShell;
 import org.eclipse.basyx.submodel.metamodel.api.identifier.IIdentifier;
@@ -8,12 +8,12 @@ import eng.br.mam.digitaltrain.common.submodel.IStatusSM;
 import eng.br.mam.digitaltrain.common.submodel.ServiceSM;
 import eng.br.mam.digitaltrain.common.submodel.StatusSM;
 
-public abstract class BaseDeviceAAS extends AssetAdministrationShell implements IDeviceAAS {
+public abstract class ComponentAAS extends AssetAdministrationShell implements IComponentAAS {
 	
 	private IIdentifier serviceId;
 	private IIdentifier statusId;
 
-	public BaseDeviceAAS(ServiceSM serviceSM, StatusSM statusSM) {
+	public ComponentAAS(ServiceSM serviceSM, StatusSM statusSM) {
 		super();
 		addSubmodel(serviceSM);
 		addSubmodel(statusSM);

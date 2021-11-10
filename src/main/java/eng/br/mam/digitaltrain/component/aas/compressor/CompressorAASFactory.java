@@ -1,9 +1,9 @@
-package eng.br.mam.digitaltrain.device.aas.compressor;
+package eng.br.mam.digitaltrain.component.aas.compressor;
 
 import eng.br.mam.digitaltrain.common.submodel.ServiceSM;
-import eng.br.mam.digitaltrain.device.aas.DeviceAASFactory;
+import eng.br.mam.digitaltrain.component.ComponentFactory;
 
-public class CompressorAASFactory extends DeviceAASFactory {
+public class CompressorAASFactory extends ComponentFactory {
 	
 	public CompressorAASFactory(ServiceSM serviceSM) {
 		super(serviceSM);

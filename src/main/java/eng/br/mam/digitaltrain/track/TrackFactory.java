@@ -1,4 +1,4 @@
-package eng.br.mam.digitaltrain.track.aas;
+package eng.br.mam.digitaltrain.track;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -9,9 +9,10 @@ import org.eclipse.basyx.submodel.metamodel.map.submodelelement.SubmodelElementC
 
 import eng.br.mam.digitaltrain.common.CommonFactory;
 import eng.br.mam.digitaltrain.common.submodel.MaintenanceSM;
+import eng.br.mam.digitaltrain.track.aas.TrackAAS;
 import eng.br.mam.digitaltrain.track.submodel.TrackTopologySM;
 
-public class TrackAASFactory {
+public class TrackFactory {
 	public static AASBundle build(SubmodelElementCollection topology) {
 		
 		TrackTopologySM trackTopologySM = new TrackTopologySM(topology);

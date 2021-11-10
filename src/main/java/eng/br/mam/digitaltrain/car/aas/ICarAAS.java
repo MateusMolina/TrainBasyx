@@ -3,8 +3,8 @@ package eng.br.mam.digitaltrain.car.aas;
 import org.eclipse.basyx.aas.metamodel.api.IAssetAdministrationShell;
 
 import eng.br.mam.digitaltrain.car.submodel.IStateSM;
-import eng.br.mam.digitaltrain.qualifiers.Maintainable;
-import eng.br.mam.digitaltrain.qualifiers.ServiceProvider;
+import eng.br.mam.digitaltrain.common.qualifiers.Maintainable;
+import eng.br.mam.digitaltrain.common.qualifiers.ServiceProvider;
 /**
  * 
  * * Status: should contain operative info about the car

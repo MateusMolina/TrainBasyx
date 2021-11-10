@@ -1,14 +1,14 @@
-package eng.br.mam.digitaltrain.device.aas;
+package eng.br.mam.digitaltrain.component;
 
 import eng.br.mam.digitaltrain.common.CommonFactory;
 import eng.br.mam.digitaltrain.common.submodel.ServiceSM;
 import eng.br.mam.digitaltrain.common.submodel.StatusSM;
 
-public class DeviceAASFactory {
+public class ComponentFactory {
 	private ServiceSM serviceSM;
 	private StatusSM statusSM;
 	
-	public DeviceAASFactory(ServiceSM serviceSM) {
+	public ComponentFactory(ServiceSM serviceSM) {
 		this.serviceSM = serviceSM;
 		this.statusSM = CommonFactory.getBlankStatusSM();
 	}
