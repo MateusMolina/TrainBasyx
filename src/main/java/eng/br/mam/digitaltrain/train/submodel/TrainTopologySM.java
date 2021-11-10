@@ -1,21 +1,26 @@
 package eng.br.mam.digitaltrain.train.submodel;
 
-import org.eclipse.basyx.submodel.metamodel.api.submodelelement.ISubmodelElementCollection;
+import org.eclipse.basyx.aas.metamodel.map.descriptor.ModelUrn;
 import org.eclipse.basyx.submodel.metamodel.map.Submodel;
 import org.eclipse.basyx.submodel.metamodel.map.submodelelement.SubmodelElementCollection;
 
 public class TrainTopologySM extends Submodel implements ITrainTopologySM {
 
-	private String topologyId;
+	public static final String ID = "trainTopologySM";
+	public static final String ID_SHORT = "trainTopologySMIdShort";
+	public static final String ID_TOPOLOGY = "topologyProp";
+
 	
 	public TrainTopologySM(SubmodelElementCollection topology) {
 		super();
+		setIdShort(ID_SHORT);
+		setIdentification(new ModelUrn(ID));
+		topology.setIdShort(ID_TOPOLOGY);
 		this.addSubmodelElement(topology);
-		this.topologyId = topology.getIdShort();
 	}
 	@Override
-	public ISubmodelElementCollection getTopology() {
-		return (SubmodelElementCollection) this.getSubmodelElement(topologyId);
+	public SubmodelElementCollection getTopology() {
+		return (SubmodelElementCollection) getSubmodelElement(ID_TOPOLOGY);
 	}
 
 }
