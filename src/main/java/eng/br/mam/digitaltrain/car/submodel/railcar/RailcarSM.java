@@ -3,6 +3,7 @@ package eng.br.mam.digitaltrain.car.submodel.railcar;
 import org.eclipse.basyx.submodel.metamodel.map.Submodel;
 
 import eng.br.mam.digitaltrain.component.aas.pneumaticbrake.IPneumaticBrakeAAS;
+import eng.br.mam.digitaltrain.component.aas.pneumaticbrake.PneumaticBrakeAAS;
 
 public class RailcarSM extends Submodel implements IRailcarSM {
 
@@ -14,7 +15,7 @@ public class RailcarSM extends Submodel implements IRailcarSM {
 	}
 
 	@Override
-	public IPneumaticBrakeAAS getPneumaticBrake() {
+	public PneumaticBrakeAAS getPneumaticBrake() {
 		return pneumaticBrakeAAS;
 	}
 

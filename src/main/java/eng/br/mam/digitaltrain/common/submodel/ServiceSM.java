@@ -1,25 +1,28 @@
 package eng.br.mam.digitaltrain.common.submodel;
 
-import org.eclipse.basyx.submodel.metamodel.api.identifier.IIdentifier;
+import org.eclipse.basyx.aas.metamodel.map.descriptor.ModelUrn;
 import org.eclipse.basyx.submodel.metamodel.map.Submodel;
 import org.eclipse.basyx.submodel.metamodel.map.submodelelement.SubmodelElementCollection;
 
 import eng.br.mam.digitaltrain.common.service.IServiceProvider;
 
 public class ServiceSM extends Submodel implements IServiceSM {
-
+	
 	public static final String IDSHORT = "serviceSM";
-	public static final String IDSHORT_SERVICES = "services";
+	public static final String ID(String aasId) {
+		return aasId+"_"+IDSHORT;
+	}
+	public static final String SERVICES_IDSHORT = "services";
 
 	
-	public ServiceSM(IIdentifier ident, IServiceProvider serviceProvider) {
-		super(IDSHORT, ident);		
+	public ServiceSM(String aasId, IServiceProvider serviceProvider) {
+		super(IDSHORT, new ModelUrn(ID(aasId)));		
 		this.addSubmodelElement(serviceProvider.getServiceCollection());
 	}
 	
 	@Override
 	public SubmodelElementCollection getServicesCollection() {
-		return (SubmodelElementCollection) this.getSubmodelElement(IDSHORT_SERVICES);
+		return (SubmodelElementCollection) this.getSubmodelElement(SERVICES_IDSHORT);
 	}
 
 	@Override
