@@ -4,7 +4,7 @@ import org.eclipse.basyx.aas.metamodel.api.IAssetAdministrationShell;
 
 import eng.br.mam.digitaltrain.car.submodel.IStateSM;
 import eng.br.mam.digitaltrain.common.qualifiers.Maintainable;
-import eng.br.mam.digitaltrain.common.qualifiers.ServiceProvider;
+import eng.br.mam.digitaltrain.common.qualifiers.Server;
 /**
  * 
  * * Status: should contain operative info about the car
@@ -14,6 +14,6 @@ import eng.br.mam.digitaltrain.common.qualifiers.ServiceProvider;
  *
  */
 
-public interface ICarAAS extends IAssetAdministrationShell, ServiceProvider, Maintainable {
+public interface ICarAAS extends IAssetAdministrationShell, Server, Maintainable {
 	public IStateSM getStateSM();
 }

@@ -1,29 +1,31 @@
 package eng.br.mam.digitaltrain.common.submodel;
 
-import org.eclipse.basyx.submodel.metamodel.api.submodelelement.ISubmodelElementCollection;
+import org.eclipse.basyx.submodel.metamodel.api.identifier.IIdentifier;
 import org.eclipse.basyx.submodel.metamodel.map.Submodel;
 import org.eclipse.basyx.submodel.metamodel.map.submodelelement.SubmodelElementCollection;
 
-public abstract class ServiceSM extends Submodel implements IServiceSM {
+import eng.br.mam.digitaltrain.common.service.IServiceProvider;
+
+public class ServiceSM extends Submodel implements IServiceSM {
+
+	public static final String IDSHORT = "serviceSM";
+	public static final String IDSHORT_SERVICES = "services";
+
 	
-	private String servicesId;
-	
-	
-	public ServiceSM(SubmodelElementCollection services) {
-		super();
-		this.addSubmodelElement(services);
-		this.servicesId = services.getIdShort();
+	public ServiceSM(IIdentifier ident, IServiceProvider serviceProvider) {
+		super(IDSHORT, ident);		
+		this.addSubmodelElement(serviceProvider.getServiceCollection());
 	}
 	
 	@Override
-	public ISubmodelElementCollection getServices() {
-		return (SubmodelElementCollection) this.getSubmodelElement(servicesId);
+	public SubmodelElementCollection getServicesCollection() {
+		return (SubmodelElementCollection) this.getSubmodelElement(IDSHORT_SERVICES);
 	}
 
 	@Override
-	public Object callService(String name, Object... params) {
-		// TODO To implement caller
-		return null;
+	public Object[] callService(String serviceIdShort, Object... params) {
+		throw new RuntimeException("callService not available in local mode");
 	}
+
 
 }
