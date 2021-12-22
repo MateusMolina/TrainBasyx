@@ -8,16 +8,16 @@ import org.eclipse.basyx.submodel.metamodel.map.submodelelement.operation.Operat
 
 import eng.br.mam.digitaltrain.common.service.Service;
 
-public class LoadService extends Service {
+public class LocalLoadService extends Service {
 
 	public static final String IDSHORT = "load";
 	public static final LangStrings DESCRIPTION = LangStrings.fromStringPairs(
 														"EN","Load a car a specified ammount");
 	
-	public LoadService(String serverAASId) {
+	public LocalLoadService(String serverAASId) {
 		super(serverAASId, IDSHORT, DESCRIPTION);
 	}
-
+	
 	@Override
 	public Consumer<Object[]> getInvokable() {
 		// TODO Auto-generated method stub
@@ -35,7 +35,4 @@ public class LoadService extends Service {
 		// TODO Auto-generated method stub
 		return null;
 	}
-
-
-
 }

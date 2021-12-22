@@ -2,7 +2,8 @@ package eng.br.mam.digitaltrain.car.submodel.locomotive;
 
 import org.eclipse.basyx.aas.metamodel.map.descriptor.ModelUrn;
 import org.eclipse.basyx.submodel.metamodel.map.Submodel;
-import org.eclipse.basyx.submodel.metamodel.map.submodelelement.dataelement.property.Property;
+
+import eng.br.mam.digitaltrain.common.submodelelement.BoundedProperty;
 
 public class LocomotiveControlSM extends Submodel implements ILocomotiveControlSM {
 
@@ -13,19 +14,16 @@ public class LocomotiveControlSM extends Submodel implements ILocomotiveControlS
 	
 	public static final String CURRENTTRACTIVENOTCH_IDSHORT = "currentTractiveNotch";
 	public static final String CURRENTPNEUMATICBRAKENOTCH_IDSHORT = "currentPneumaticBrakeNotch";
-	public static final String CURRENTEGPPRESSURE_IDSHORT = "currentEGPressure";
 
 	
-	public LocomotiveControlSM(String aasId, Property currentTractiveNotchProp, Property currentPneumaticBrakeNotch, Property currentEGPressure) {
+	public LocomotiveControlSM(String aasId, BoundedProperty currentTractiveNotchProp, BoundedProperty currentPneumaticBrakeNotch) {
 		super(IDSHORT, new ModelUrn(ID(aasId)));
 		
 		currentTractiveNotchProp.setIdShort(CURRENTTRACTIVENOTCH_IDSHORT);
 		currentPneumaticBrakeNotch.setIdShort(CURRENTPNEUMATICBRAKENOTCH_IDSHORT);
-		currentEGPressure.setIdShort(CURRENTEGPPRESSURE_IDSHORT);
 		
 		addSubmodelElement(currentTractiveNotchProp);
 		addSubmodelElement(getCurrentPneumaticBrakeNotch());
-		addSubmodelElement(getCurrentEGPressure());
 	}
 	
 	/**
@@ -34,24 +32,18 @@ public class LocomotiveControlSM extends Submodel implements ILocomotiveControlS
 	 * @param aasId
 	 */
 	public LocomotiveControlSM(String aasId) {
-		this(aasId, new Property(CURRENTTRACTIVENOTCH_IDSHORT, 0),
-					new Property(CURRENTPNEUMATICBRAKENOTCH_IDSHORT, 0),
-					new Property(CURRENTEGPPRESSURE_IDSHORT, 0));
+		this(aasId, new BoundedProperty(CURRENTTRACTIVENOTCH_IDSHORT, 0, -8, 8),
+					new BoundedProperty(CURRENTPNEUMATICBRAKENOTCH_IDSHORT, 0, 0, 32));
 	}
 	
 	@Override
-	public Property getCurrentTractiveNotch() {
-		return (Property) getSubmodelElement(CURRENTTRACTIVENOTCH_IDSHORT);
+	public BoundedProperty getCurrentTractiveNotch() {
+		return (BoundedProperty) getSubmodelElement(CURRENTTRACTIVENOTCH_IDSHORT);
 	}
 
 	@Override
-	public Property getCurrentPneumaticBrakeNotch() {
-		return (Property) getSubmodelElement(CURRENTPNEUMATICBRAKENOTCH_IDSHORT);
-	}
-
-	@Override
-	public Property getCurrentEGPressure() {
-		return (Property) getSubmodelElement(CURRENTEGPPRESSURE_IDSHORT);
+	public BoundedProperty getCurrentPneumaticBrakeNotch() {
+		return (BoundedProperty) getSubmodelElement(CURRENTPNEUMATICBRAKENOTCH_IDSHORT);
 	}
 
 }

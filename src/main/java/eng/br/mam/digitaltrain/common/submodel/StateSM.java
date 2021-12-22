@@ -22,6 +22,10 @@ public class StateSM extends Submodel implements IStateSM {
 		this.addSubmodelElement(states);
 	}
 	
+	public StateSM(String aasId) {
+		this(aasId, new SubmodelElementCollection(STATES_IDSHORT));
+	}
+	
 	@Override
 	public SubmodelElementCollection getStates() {
 		return (SubmodelElementCollection) this.getSubmodelElement(STATES_IDSHORT);

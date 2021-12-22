@@ -1,13 +1,12 @@
 package eng.br.mam.digitaltrain.car.submodel.locomotive;
 
-import org.eclipse.basyx.submodel.metamodel.api.submodelelement.dataelement.IProperty;
+import eng.br.mam.digitaltrain.common.submodelelement.IBoundedProperty;
 
 public interface ILocomotiveControlSM {
 	
-	public IProperty getCurrentTractiveNotch();
+	public IBoundedProperty getCurrentTractiveNotch();
 	
-	public IProperty getCurrentPneumaticBrakeNotch();
+	public IBoundedProperty getCurrentPneumaticBrakeNotch();
 	
-	public IProperty getCurrentEGPressure();	
 
 }

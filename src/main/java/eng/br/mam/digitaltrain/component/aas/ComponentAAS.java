@@ -1,32 +1,28 @@
 package eng.br.mam.digitaltrain.component.aas;
 
 import org.eclipse.basyx.aas.metamodel.map.AssetAdministrationShell;
+import org.eclipse.basyx.aas.metamodel.map.parts.Asset;
 import org.eclipse.basyx.submodel.metamodel.api.identifier.IIdentifier;
 
-import eng.br.mam.digitaltrain.common.submodel.IServiceSM;
-import eng.br.mam.digitaltrain.common.submodel.IStatusSM;
-import eng.br.mam.digitaltrain.common.submodel.ServiceSM;
-import eng.br.mam.digitaltrain.common.submodel.StatusSM;
+import eng.br.mam.digitaltrain.common.submodel.MaintenanceSM;
+import eng.br.mam.digitaltrain.common.submodel.StateSM;
 
-public abstract class ComponentAAS extends AssetAdministrationShell implements IComponentAAS {
+public class ComponentAAS extends AssetAdministrationShell implements IComponentAAS {
+
+	public ComponentAAS(String idShort, IIdentifier id, Asset asset, StateSM stateSM, MaintenanceSM maintenanceSM) {
+		super(idShort, id, asset);
+		addSubmodel(maintenanceSM);
+		addSubmodel(stateSM);
+	}
 	
-	private IIdentifier serviceId;
-	private IIdentifier statusId;
-
-	public ComponentAAS(ServiceSM serviceSM, StatusSM statusSM) {
-		super();
-		addSubmodel(serviceSM);
-		addSubmodel(statusSM);
-		this.serviceId = serviceSM.getIdentification();
-		this.statusId = statusSM.getIdentification();
+	@Override
+	public StateSM getStateSM() {
+		throw new RuntimeException("Can not execute getStateSM in local mode");
 	}
 
-	public IServiceSM getServiceSM() {
-		return (ServiceSM) this.getSubmodel(serviceId);
+	@Override
+	public MaintenanceSM getMaintenanceSM() {
+		throw new RuntimeException("Can not execute getMaintenanceSM in local mode");
 	}
-
-	public IStatusSM getStatusSM() {
-		return (StatusSM) this.getSubmodel(statusId);
-	}
-
+	
 }
