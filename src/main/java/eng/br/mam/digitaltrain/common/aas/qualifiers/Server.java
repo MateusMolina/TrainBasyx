@@ -1,4 +1,4 @@
-package eng.br.mam.digitaltrain.common.qualifiers;
+package eng.br.mam.digitaltrain.common.aas.qualifiers;
 
 import eng.br.mam.digitaltrain.common.submodel.IServiceSM;
 import eng.br.mam.digitaltrain.common.submodel.IStatusSM;

@@ -1,29 +1,26 @@
 package eng.br.mam.digitaltrain.car.aas.locomotive;
 
+import org.eclipse.basyx.aas.metamodel.map.parts.Asset;
 import org.eclipse.basyx.submodel.metamodel.api.identifier.IIdentifier;
 
 import eng.br.mam.digitaltrain.car.aas.CarAAS;
-import eng.br.mam.digitaltrain.car.submodel.StateSM;
-import eng.br.mam.digitaltrain.car.submodel.locomotive.ILocomotiveSM;
-import eng.br.mam.digitaltrain.car.submodel.locomotive.LocomotiveSM;
+import eng.br.mam.digitaltrain.car.submodel.locomotive.LocomotiveControlSM;
+import eng.br.mam.digitaltrain.common.submodel.ComponentsSM;
 import eng.br.mam.digitaltrain.common.submodel.MaintenanceSM;
 import eng.br.mam.digitaltrain.common.submodel.ServiceSM;
+import eng.br.mam.digitaltrain.common.submodel.StateSM;
 import eng.br.mam.digitaltrain.common.submodel.StatusSM;
 
 public class LocomotiveAAS extends CarAAS implements ILocomotiveAAS {
 	
-	private IIdentifier locomotiveId;
-
-	public LocomotiveAAS(ServiceSM serviceSM, StatusSM statusSM, MaintenanceSM maintenanceSM, StateSM stateSM, LocomotiveSM locomotiveSM) {
-		super(serviceSM, statusSM, maintenanceSM, stateSM);
-		addSubmodel(locomotiveSM);
-		setIdShort("LocomotiveAAS");
-		this.locomotiveId = locomotiveSM.getIdentification();
+	public LocomotiveAAS(String idShort, IIdentifier id, Asset asset, ComponentsSM componentsSM, MaintenanceSM maintenanceSM, ServiceSM serviceSM, StateSM stateSM, StatusSM statusSM, LocomotiveControlSM locomotiveControlSM) {
+		super(idShort, id, asset, componentsSM, maintenanceSM, serviceSM, stateSM, statusSM);
+		addSubmodel(locomotiveControlSM);
 	}
 
 	@Override
-	public ILocomotiveSM getLocomotiveSM() {
-		return (LocomotiveSM) this.getSubmodel(locomotiveId);
+	public LocomotiveControlSM getLocomotiveControlSM() {
+		throw new RuntimeException("getLocomotiveSM() can not be execcuted locally");
 	}
 
 }

@@ -11,8 +11,8 @@ import org.eclipse.basyx.submodel.metamodel.api.ISubmodel;
 import org.eclipse.basyx.submodel.metamodel.api.identifier.IIdentifier;
 
 import eng.br.mam.digitaltrain.car.aas.CarAASFactory;
-import eng.br.mam.digitaltrain.car.submodel.railcar.RailcarSM;
 import eng.br.mam.digitaltrain.common.service.IServiceProvider;
+import eng.br.mam.digitaltrain.common.submodel.ComponentsSM;
 import eng.br.mam.digitaltrain.common.submodel.MaintenanceSM;
 import eng.br.mam.digitaltrain.common.submodel.ServiceSM;
 import eng.br.mam.digitaltrain.common.submodel.StateSM;
@@ -29,7 +29,7 @@ public class RailcarAASFactory extends CarAASFactory {
 		StatusSM statusSM = buildStatusSM(aasId);
 		MaintenanceSM maintenanceSM = buildMaintenanceSM(aasId);
 		StateSM stateSM = buildStateSM(aasId, mass);
-		RailcarSM railcarSM = buildRailcarSM(aasId);
+		ComponentsSM componentsSM = buildComponentsSM(aasId);
 		
 		
 		Set<ISubmodel> sms = new HashSet<ISubmodel>();
@@ -37,18 +37,19 @@ public class RailcarAASFactory extends CarAASFactory {
 		sms.add(statusSM);
 		sms.add(maintenanceSM);
 		sms.add(stateSM);
-		sms.add(railcarSM);
+		sms.add(componentsSM);
 		
-		RailcarAAS car = new RailcarAAS(aasIdShort,ident, asset, serviceSM, statusSM, maintenanceSM, stateSM, railcarSM);
+		RailcarAAS car = new RailcarAAS(aasIdShort,ident, asset, componentsSM, serviceSM, statusSM, maintenanceSM, stateSM);
 		
 		AASBundle bundle = new AASBundle(car, sms);
 		return bundle;
 		
 	}	
 	
-	
-	public static RailcarSM buildRailcarSM(String aasId) {
-		// TODO implement method buildRailcarSM
-		return null;
-	}
+	public static ComponentsSM buildComponentsSM(String aasId) {
+		ComponentsSM componentsSM = new ComponentsSM(aasId);
+		// TODO to add railcar components
+		return componentsSM;
+	}	
+
 }
